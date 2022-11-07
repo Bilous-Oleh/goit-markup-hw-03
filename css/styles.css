@@ -80,16 +80,9 @@ img {
     display: block;
 }
 
-/* .section {
+section {
     padding-top: 94px;
     padding-bottom: 94px;
-} */
-
-/* --------HEADER-------- */
-
-.header {
-    padding-top: 24px;
-    padding-bottom: 25px;
 }
 
 .logo-link {
@@ -97,8 +90,29 @@ img {
     font-size: 26px;
     line-height: 1.1923;
     letter-spacing: 0.03em;
+}
+
+/* --------HEADER-------- */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.navigation {
+    margin-right: auto;
+}
+
+.header-nav {
+    display: flex;
+    gap: 50px;
+}
+
+.logo-header {
     padding-top: 24px;
     padding-bottom: 25px;
+    margin-right: 93px;
 }
 
 .logo-blue {
@@ -134,12 +148,20 @@ img {
     color: #2196F3;
 }
 
+.header-contact {
+    display: flex;
+}
+
 .header-contact a {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1429;
     letter-spacing: 0.02em;
     color: #757575;
+}
+
+.header-contact-tel {
+    margin-left: 50px;
 }
 
 .header-contact-mail:hover,
@@ -155,12 +177,18 @@ img {
 /* ----------HERO---------- */
 
 .hero {
+    display: flex;
     padding-top: 200px;
     padding-bottom: 200px;
     background: #2F303A;
 }
 
+.hero-container {
+    max-width: 696px;
+}
+
 .hero-title {
+
     font-size: 44px;
     line-height: 1.3636;
     text-align: center;
@@ -171,7 +199,9 @@ img {
 }
 
 .hero-btn {
-    font-family: 'Roboto';     
+    min-width: 216px;
+    height: 50px;
+    font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
@@ -181,17 +211,17 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
-    /* cursor: pointer; */
     display: block;
     margin: 0 auto;
 }
 
 /* ---------SPACIAL---------- */
 
-.spacial {
-    padding-top: 94px;
-    padding-bottom: 94px;
+.spacial-list {
+    display: flex;
+    gap: 30px;
 }
+
 
 .section-title {
     font-size: 36px;
@@ -217,33 +247,45 @@ img {
 }
 
 /* -------DOING------- */
-.doing {
+
+.doing-container {
     padding-top: 0;
-    padding-bottom: 94px;
+}
+
+.doing-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
 }
 
 .doing-title {
     margin-top: 0;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 /* -------TEAM-------- */
 
 .team {
     background: #F5F4FA;
-    padding-top: 94px;
-    padding-bottom: 94px;
 }
 
 .team-title {
     margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
 }
 
 .team-back {
     width: 270px;
     background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+    /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px; */
 }
 
 .team-subtitle {
@@ -254,6 +296,8 @@ img {
     color: var(--second-title-color);
     padding-top: 30px;
     padding-bottom: 10px;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
 .team-text {
@@ -263,6 +307,8 @@ img {
     letter-spacing: 0.03em;
     color: var(--text-color);
     padding-bottom: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
 /* ------FOOTER------ */
@@ -273,14 +319,17 @@ img {
     padding-bottom: 60px;
 }
 
-.contacts-address {
-    margin-top: 20px;
+.contacts-list {
+    padding-top: 20px;
 }
 
 .contacts-item {
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.03em;
+    display: flex;
+    gap: 9px;
+
 }
 
 .contacts-link-map {
@@ -304,13 +353,23 @@ img {
 
 /* -----PORTFOLIO NAVIGATION------ */
 
-.nav {
-    margin-top: 94px;
-    margin-bottom: 94px;
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn-nav {
-    margin-bottom: 34px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+.list-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
 .btn-link {
@@ -324,8 +383,7 @@ img {
     background: #F5F4FA;
     border-radius: 4px;
     border: none;
-
-    /* cursor: pointer; */
+    padding: 6px 22px;
 }
 
 .btn-link:hover,
@@ -333,6 +391,12 @@ img {
     background: #2196F3;
     color: #FFFFFF;
 }
+
+.nav-uptitle,
+.nav-text {
+    margin-left: 24px;
+}
+
 .img-nav {
     padding-bottom: 30px;
 }
@@ -345,8 +409,6 @@ img {
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
 }
-
-
 
 .nav-uptitle {
     /* font-weight: 700; */
