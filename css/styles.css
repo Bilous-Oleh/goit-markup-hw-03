@@ -14,6 +14,7 @@ body {
     font-size: 14px;
     letter-spacing: 0.03em;
     background: #FFFFFF;
+    margin: 0 auto;
 }
 
 .list {
@@ -78,6 +79,8 @@ address {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 section {
@@ -92,7 +95,7 @@ section {
     letter-spacing: 0.03em;
 }
 
-/* --------HEADER-------- */
+/* ------------------------HEADER--------------------- */
 
 .header-container {
     display: flex;
@@ -106,6 +109,8 @@ section {
 
 .header-nav {
     display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
     gap: 50px;
 }
 
@@ -160,7 +165,13 @@ section {
     color: #757575;
 }
 
+.header-contact-mail,
 .header-contact-tel {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header-tel {
     margin-left: 50px;
 }
 
@@ -174,7 +185,7 @@ section {
     color: #2196F3;
 }
 
-/* ----------HERO---------- */
+/* -----------------------HERO----------------------- */
 
 .hero {
     display: flex;
@@ -215,13 +226,12 @@ section {
     margin: 0 auto;
 }
 
-/* ---------SPACIAL---------- */
+/* -------------------SPACIAL-------------------- */
 
 .spacial-list {
     display: flex;
     gap: 30px;
 }
-
 
 .section-title {
     font-size: 36px;
@@ -246,7 +256,11 @@ section {
     color: var(--text-color);
 }
 
-/* -------DOING------- */
+.spacial-item {
+    flex-basis: calc((100% - 90px) / 4);
+}
+
+/* ---------------------DOING--------------------- */
 
 .doing-container {
     padding-top: 0;
@@ -264,7 +278,7 @@ section {
     text-align: center;
 }
 
-/* -------TEAM-------- */
+/* ----------------------TEAM--------------------- */
 
 .team {
     background: #F5F4FA;
@@ -284,6 +298,8 @@ section {
 .team-back {
     width: 270px;
     background: #FFFFFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
     /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px; */
 }
@@ -294,10 +310,9 @@ section {
     line-height: 1.1875;
     letter-spacing: 0.03em;
     color: var(--second-title-color);
-    padding-top: 30px;
-    padding-bottom: 10px;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 10px;
 }
 
 .team-text {
@@ -306,12 +321,11 @@ section {
     line-height: 1.1875;
     letter-spacing: 0.03em;
     color: var(--text-color);
-    padding-bottom: 30px;
     text-align: center;
     letter-spacing: 0.03em;
 }
 
-/* ------FOOTER------ */
+/* ------------------------FOOTER--------------------------- */
 
 .contacts {
     background: #2F303A;
@@ -319,8 +333,8 @@ section {
     padding-bottom: 60px;
 }
 
-.contacts-list {
-    padding-top: 20px;
+.contacts-address {
+    margin-top: 20px;
 }
 
 .contacts-item {
@@ -328,18 +342,18 @@ section {
     line-height: 1.5;
     letter-spacing: 0.03em;
     display: flex;
-    gap: 9px;
+}
 
+.contacts-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .contacts-link-map {
     color: #FFFFFF;
-    padding-bottom: 9px;
 }
 
 .contacts-link-mail {
     color: rgba(255, 255, 255, 0.6);
-    padding-bottom: 9px;
 }
 
 .contacts-link-tel {
@@ -351,7 +365,7 @@ section {
     color: #2196F3;
 }
 
-/* -----PORTFOLIO NAVIGATION------ */
+/* -----------------------PORTFOLIO NAVIGATION--------------------- */
 
 .nav-container {
     display: flex;
@@ -362,7 +376,7 @@ section {
 .btn-nav {
     display: flex;
     gap: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 16px;
 }
 
 .list-nav {
@@ -370,6 +384,7 @@ section {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    margin-top: 34px;
 }
 
 .btn-link {
@@ -392,22 +407,12 @@ section {
     color: #FFFFFF;
 }
 
-.nav-uptitle,
-.nav-text {
-    margin-left: 24px;
-}
-
-.img-nav {
-    padding-bottom: 30px;
-}
-
 .nav-border {
     box-sizing: border-box;
-    width: 370px;
-    height: 110px;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
+    padding: 20px 24px;
 }
 
 .nav-uptitle {
@@ -416,8 +421,6 @@ section {
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--second-title-color);
-    padding-top: 20px;
-    padding-bottom: 4px;
 }
 
 .nav-text {
@@ -426,5 +429,4 @@ section {
     line-height: 30px;
     letter-spacing: 0.03em;
     color: var(--text-color);
-    padding-bottom: 20px;
 }
